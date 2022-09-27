@@ -1,13 +1,15 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
     <style name="Theme.Breedog" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/yellow_f2</item>
+        <item name="colorPrimary">@color/orange_f2</item>
         <item name="colorPrimaryVariant">@color/brown_d9</item>
-        <item name="colorOnPrimary">@color/gray_0a</item>
+        <item name="colorOnPrimary">@color/yellow_f2</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/gray_0a</item>
+
+        <!-- Background. -->
         <item name="android:background">@color/gray_0a</item>
+
     </style>
 </resources>
