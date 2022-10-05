@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import mx.julio.breedog.R
 
+/**
+ * Main fragment.
+ */
 class HomeFragment : Fragment() {
 
     override fun onCreateView(

@@ -1,6 +1,27 @@
 package mx.julio.breedog.di
 
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import mx.julio.breedog.data.source.IDogsSource
+import mx.julio.breedog.framework.data.remote.Api
+import mx.julio.breedog.framework.source.DogsRemoteSource
+import javax.inject.Singleton
+
 /**
  * Module that provides dependencies related to business implementation.
  */
-object FrameworkModule
+@Module
+@InstallIn(SingletonComponent::class)
+object FrameworkModule {
+
+    /**
+     * Provides an instance of the dogs source.
+     * @param api client.
+     * @return the data source.
+     */
+    @Provides
+    @Singleton
+    fun dogsSourceProvider(api: Api): IDogsSource = DogsRemoteSource(api)
+}

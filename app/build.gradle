@@ -7,14 +7,19 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
+// Keys
+def keysFile = rootProject.file("keys.properties")
+def keys = new Properties()
+keys.load(new FileInputStream(keysFile))
+
 android {
     namespace 'mx.julio.breedog'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "mx.julio.breedog"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -34,8 +39,30 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding true
+    }
+
+    flavorDimensions "breedog"
+
+    productFlavors {
+        develop {
+            dimension "breedog"
+            buildConfigField "String", "API_BASE_URL", '"https://todogs.herokuapp.com/api/v1/"'
+            buildConfigField "String", "API_KEY", keys.get("API_KEY")
+            manifestPlaceholders.setAutoLogAppEventsEnabled = false
+            manifestPlaceholders.setAutoInitEnabled = true
+        }
+
+        prod {
+            dimension "breedog"
+            buildConfigField "String", "API_BASE_URL", '"https://todogs.herokuapp.com/api/v1/"'
+            buildConfigField "String", "API_KEY", keys.get("API_KEY")
+            manifestPlaceholders.setAutoLogAppEventsEnabled = false
+            manifestPlaceholders.setAutoInitEnabled = true
+
+
+        }
     }
 }
 
@@ -58,10 +85,18 @@ dependencies {
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
     // Navigation component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation "androidx.activity:activity-ktx:1.6.0"
+
 }
