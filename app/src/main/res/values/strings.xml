@@ -3,4 +3,15 @@
     <string name="text_home">Home</string>
     <string name="text_favorites">Favorites</string>
     <string name="text_scan">Scan</string>
+
+    <string name="text_female">Female</string>
+    <string name="text_weight">Weight</string>
+    <string name="text_height">Height</string>
+    <string name="text_group">Group</string>
+    <string name="text_male">Male</string>
+    <string name="text_dog_not_found">Dog not found.</string>
+
+    <!-- Formats -->
+    <string name="format_years">%s years</string>
+    <string name="text_dog_image">Dog image</string>
 </resources>

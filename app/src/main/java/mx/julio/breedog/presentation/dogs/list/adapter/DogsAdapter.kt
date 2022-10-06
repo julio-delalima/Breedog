@@ -8,8 +8,19 @@ import mx.julio.breedog.domain.model.Dog
 
 /**
  * Adapter of dogs.
+ * @property onDogSelectListener the listener for selection.
  */
 class DogsAdapter : ListAdapter<Dog, DogHolder>(DiffCallback) {
+
+    private var onDogSelectListener: ((Dog) -> Unit)? = null
+
+    /**
+     * Set new value for listener.
+     * @param listener the new value.
+     */
+    fun setOnDogSelectListener(listener: (Dog) -> Unit) {
+        this.onDogSelectListener = listener
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogHolder {
         return DogHolder(
@@ -18,7 +29,9 @@ class DogsAdapter : ListAdapter<Dog, DogHolder>(DiffCallback) {
                 parent,
                 false
             )
-        )
+        ) {
+            onDogSelectListener?.invoke(getItem(it))
+        }
     }
 
     override fun onBindViewHolder(holder: DogHolder, position: Int) {

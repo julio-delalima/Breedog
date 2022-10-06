@@ -10,4 +10,7 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_59">#595959</color>
+    <color name="gray_ab">#ABABAB</color>
+    <color name="gray_71">#717171</color>
+
 </resources>
