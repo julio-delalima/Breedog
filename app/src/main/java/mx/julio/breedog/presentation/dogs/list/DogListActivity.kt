@@ -1,10 +1,12 @@
 package mx.julio.breedog.presentation.dogs.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import mx.julio.breedog.databinding.ActivityDogListBinding
+import mx.julio.breedog.presentation.dogs.detail.DogDetailActivity
 import mx.julio.breedog.presentation.dogs.list.adapter.DogsAdapter
 
 /**
@@ -35,6 +37,11 @@ class DogListActivity : AppCompatActivity() {
      * Configure the view.
      */
     private fun setupView() {
+        adapter.setOnDogSelectListener {
+            val intent = Intent(this, DogDetailActivity::class.java)
+            intent.putExtra(DogDetailActivity.ARG_DOG, it)
+            startActivity(intent)
+        }
         binding.dogs.adapter = adapter
     }
 

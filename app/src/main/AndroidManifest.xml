@@ -16,6 +16,13 @@
         android:theme="@style/Theme.Breedog"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.dogs.detail.DogDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".presentation.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -35,7 +42,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".presentation.dogs.list.DogListActivity"
             android:exported="false">

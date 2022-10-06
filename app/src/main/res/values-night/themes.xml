@@ -8,8 +8,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/gray_0a</item>
 
-        <!-- Background. -->
-        <item name="android:background">@color/gray_0a</item>
+    </style>
 
+    <!-- Background. -->
+    <style name="Theme.Breedog.Base" parent="Theme.Breedog">
+        <item name="android:background">@color/gray_0a</item>
     </style>
 </resources>
