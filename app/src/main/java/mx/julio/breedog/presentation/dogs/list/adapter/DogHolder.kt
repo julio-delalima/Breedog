@@ -1,5 +1,6 @@
 package mx.julio.breedog.presentation.dogs.list.adapter
 
+import coil.load
 import mx.julio.breedog.databinding.ItemDogBinding
 import mx.julio.breedog.domain.model.Dog
 import mx.julio.breedog.presentation.base.BaseHolder
@@ -12,11 +13,11 @@ import mx.julio.breedog.presentation.base.BaseHolder
 class DogHolder(private val binding: ItemDogBinding, onSelectListener: (Int) -> Unit) : BaseHolder<Dog>(binding.root) {
 
     init {
-        binding.name.setOnClickListener {
+        binding.container.setOnClickListener {
             onSelectListener.invoke(adapterPosition)
         }
     }
     override fun bind(item: Dog) {
-        binding.name.text = item.name
+        binding.image.load(item.image)
     }
 }

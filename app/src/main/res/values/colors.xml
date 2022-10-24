@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="yellow_f2">#F2BB77</color>
-    <color name="orange_f2">#F27329</color>
-    <color name="brown_d9">#D97652</color>
-    <color name="brown_bf">#BF4A3F</color>
-    <color name="gray_f2">#F2F2F2</color>
-    <color name="gray_4b">#4b5d73</color>
-    <color name="gray_0a">#212121</color>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="md_theme_light_primary">#A04100</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#FFDBCB</color>
+    <color name="md_theme_light_onPrimaryContainer">#341000</color>
+    <color name="md_theme_light_secondary">#A7382F</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#FFDAD5</color>
+    <color name="md_theme_light_onSecondaryContainer">#410001</color>
+    <color name="md_theme_light_tertiary">#855400</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FFDDB7</color>
+    <color name="md_theme_light_onTertiaryContainer">#2A1700</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_onErrorContainer">#410002</color>
+    <color name="md_theme_light_background">#FFFBFF</color>
+    <color name="md_theme_light_onBackground">#2E1500</color>
+    <color name="md_theme_light_surface">#FFFBFF</color>
+    <color name="md_theme_light_onSurface">#2E1500</color>
+    <color name="md_theme_light_surfaceVariant">#F4DED5</color>
+    <color name="md_theme_light_onSurfaceVariant">#52443D</color>
+    <color name="md_theme_light_outline">#85736C</color>
+    <color name="md_theme_light_inverseOnSurface">#FFEEE2</color>
+    <color name="md_theme_light_inverseSurface">#4C2700</color>
+    <color name="md_theme_light_inversePrimary">#FFB693</color>
+    <color name="md_theme_light_surfaceTint">#A04100</color>
+    <color name="md_theme_dark_primary">#FFB693</color>
+    <color name="md_theme_dark_onPrimary">#562000</color>
+    <color name="md_theme_dark_primaryContainer">#7A3000</color>
+    <color name="md_theme_dark_onPrimaryContainer">#FFDBCB</color>
+    <color name="md_theme_dark_secondary">#FFB4AA</color>
+    <color name="md_theme_dark_onSecondary">#660707</color>
+    <color name="md_theme_dark_secondaryContainer">#86211A</color>
+    <color name="md_theme_dark_onSecondaryContainer">#FFDAD5</color>
+    <color name="md_theme_dark_tertiary">#FFB95D</color>
+    <color name="md_theme_dark_onTertiary">#462A00</color>
+    <color name="md_theme_dark_tertiaryContainer">#653E00</color>
+    <color name="md_theme_dark_onTertiaryContainer">#FFDDB7</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
+    <color name="md_theme_dark_background">#2E1500</color>
+    <color name="md_theme_dark_onBackground">#FFDCC1</color>
+    <color name="md_theme_dark_surface">#2E1500</color>
+    <color name="md_theme_dark_onSurface">#FFDCC1</color>
+    <color name="md_theme_dark_surfaceVariant">#52443D</color>
+    <color name="md_theme_dark_onSurfaceVariant">#D7C2B9</color>
+    <color name="md_theme_dark_outline">#A08D85</color>
+    <color name="md_theme_dark_inverseOnSurface">#2E1500</color>
+    <color name="md_theme_dark_inverseSurface">#FFDCC1</color>
+    <color name="md_theme_dark_inversePrimary">#A04100</color>
+    <color name="md_theme_dark_surfaceTint">#FFB693</color>
+
+    <!-- Base colors -->
+    <color name="primaryColor">#f27329</color>
+    <color name="secondaryColor">#bf4a3f</color>
+    <color name="tertiaryColor">#F2BB77</color>
+    <color name="neutralColor">#bdb8b6</color>
+
+    <!-- General colors -->
+    <color name="gray_bc">#BCBCBC</color>
     <color name="gray_59">#595959</color>
     <color name="gray_ab">#ABABAB</color>
-    <color name="gray_71">#717171</color>
 
 </resources>

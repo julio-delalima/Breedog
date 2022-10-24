@@ -6,12 +6,10 @@
         android:title="@string/text_home" />
 
     <item
-        android:id="@+id/scan"
         android:icon="@drawable/ic_camera"
         android:title="@string/text_scan" />
 
     <item
-        android:id="@+id/favoritesFragment"
         android:icon="@drawable/ic_heart"
         android:title="@string/text_favorites" />
 

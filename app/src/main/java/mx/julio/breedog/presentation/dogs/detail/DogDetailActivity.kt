@@ -27,7 +27,24 @@ class DogDetailActivity : AppCompatActivity() {
             finish()
             return
         }
+        setupView()
+        loadData(dog)
+    }
 
+    /**
+     * View's configuration.
+     */
+    private fun setupView() {
+        binding.closeButton.setOnClickListener {
+            finish()
+        }
+    }
+
+    /**
+     * Method for painting the dog.
+     * @param dog the dog.
+     */
+    private fun loadData(dog: Dog) {
         binding.dogImage.load(dog.image)
         binding.lifeExpectancy.text = getString(R.string.format_years, dog.lifeExpectancy)
         binding.dog = dog

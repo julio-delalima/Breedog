@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    style="@style/Theme.Breedog.Base"
     android:layout_height="match_parent"
     tools:context=".presentation.dogs.list.DogListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/dogs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_dog" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loader"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
