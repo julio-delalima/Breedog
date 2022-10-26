@@ -13,4 +13,9 @@
         android:icon="@drawable/ic_heart"
         android:title="@string/text_favorites" />
 
+    <item
+        android:id="@id/moreFragment"
+        android:icon="@drawable/ic_more"
+        android:title="@string/text_more" />
+
 </menu>

@@ -9,4 +9,9 @@
         android:name="mx.julio.breedog.presentation.main.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="mx.julio.breedog.presentation.main.more.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
 </navigation>

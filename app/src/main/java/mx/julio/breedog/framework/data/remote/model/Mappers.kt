@@ -1,6 +1,7 @@
 package mx.julio.breedog.framework.data.remote.model
 
 import mx.julio.breedog.domain.model.Dog
+import mx.julio.breedog.domain.model.User
 
 /**
  * Map a remote dog into a domain dog.
@@ -19,5 +20,18 @@ fun DogDTO.toDomainDog(): Dog {
         this.heightMale,
         this.weightFemale,
         this.weightMale
+    )
+}
+
+/**
+ * Map a remote user into a domain user.
+ * @receiver the user DTO.
+ * @return a domain user.
+ */
+fun UserDTO.toDomainUser() : User {
+    return User(
+        this.id,
+        this.email,
+        this.authenticationToken
     )
 }

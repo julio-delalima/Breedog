@@ -1,21 +1,43 @@
 <resources>
     <string name="app_name">Breedog</string>
+
+    <!-- Formats -->
+    <string name="format_years">%s years</string>
+
+    <!-- Texts -->
     <string name="text_home">Home</string>
     <string name="text_favorites">Favorites</string>
     <string name="text_scan">Scan</string>
-
     <string name="text_female">Female</string>
     <string name="text_weight">Weight</string>
     <string name="text_height">Height</string>
     <string name="text_group">Group</string>
     <string name="text_male">Male</string>
     <string name="text_dog_not_found">Dog not found.</string>
-
-    <!-- Formats -->
-    <string name="format_years">%s years</string>
     <string name="text_dog_image">Dog image</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_confirm_password">Confirm password</string>
+    <string name="text_login">Login</string>
+    <string name="text_signup">Sing up</string>
+    <string name="text_no_account">Do not have an account?</string>
+    <string name="text_register">Register</string>
+    <string name="text_more">More</string>
+    <string name="text_logout">Logout</string>
 
     <!-- Errors -->
     <string name="error_no_network">No internet connection.</string>
     <string name="error_getting_data">An error has occurred getting the data.</string>
+    <string name="error_invalid_email">Invalid email</string>
+    <string name="error_invalid_password">Password must not be empty</string>
+    <string name="error_invalid_password_confirmation">Password confirmation must not be empty</string>
+    <string name="error_password_confirmation">Password confirmation do not match</string>
+    <string name="error_signing_in">An error has occurred while signing in.</string>
+    <string name="error_logging_in">An error has occurred while logging in.</string>
+    <string name="error_existing">The user already exists.</string>
+    <string name="text_there_was_an_error">There was an error</string>
+    <string name="error_generic">An error was occurred.</string>
+    <string name="error_unauthorized">Wrong user or password.</string>
+
+
 </resources>
