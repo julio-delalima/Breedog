@@ -42,10 +42,13 @@ class DogListActivity : AppCompatActivity() {
      * Configure the view.
      */
     private fun setupView() {
-        adapter.setOnDogSelectListener {
-            val intent = Intent(this, DogDetailActivity::class.java)
-            intent.putExtra(DogDetailActivity.ARG_DOG, it)
-            startActivity(intent)
+        adapter.setOnDogSelectListener { dog, long ->
+            if(!long){
+                val intent = Intent(this, DogDetailActivity::class.java)
+                intent.putExtra(DogDetailActivity.ARG_DOG, dog)
+                startActivity(intent)
+            } else viewModel.addDogToUser(dog.id)
+
         }
 
         binding.dogs.layoutManager = GridLayoutManager(this@DogListActivity, 3)

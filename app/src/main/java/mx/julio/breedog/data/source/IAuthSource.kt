@@ -1,6 +1,6 @@
 package mx.julio.breedog.data.source
 
-import mx.julio.breedog.framework.data.remote.response.Response
+import mx.julio.breedog.framework.data.remote.response.DataResponse
 import mx.julio.breedog.framework.data.remote.response.UserData
 
 /**
@@ -15,7 +15,7 @@ interface IAuthSource {
      * @param passwordConfirmation password confirmation.
      * @return response.
      */
-    suspend fun signup(email: String, password: String, passwordConfirmation: String): Response<UserData>
+    suspend fun signup(email: String, password: String, passwordConfirmation: String): DataResponse<UserData>
 
     /**
      * Declaration to login.
@@ -23,5 +23,5 @@ interface IAuthSource {
      * @param password user's password.
      * @return response.
      */
-    suspend fun login(email: String, password: String): Response<UserData>
+    suspend fun login(email: String, password: String): DataResponse<UserData>
 }

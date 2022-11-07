@@ -3,7 +3,7 @@ package mx.julio.breedog.data.repository
 import mx.julio.breedog.data.source.IAuthSource
 import mx.julio.breedog.domain.model.User
 import mx.julio.breedog.domain.repository.IAuthRepository
-import mx.julio.breedog.framework.data.remote.model.toDomainUser
+import mx.julio.breedog.framework.data.remote.dto.toDomainUser
 import javax.inject.Inject
 
 /**

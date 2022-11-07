@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import mx.julio.breedog.R
 import mx.julio.breedog.databinding.ActivityAuthBinding
-import mx.julio.breedog.framework.Utils
+import mx.julio.breedog.framework.PreferencesUtils
 import mx.julio.breedog.framework.data.remote.ApiResponse
 import mx.julio.breedog.presentation.auth.login.LoginFragment
 import mx.julio.breedog.presentation.auth.login.LoginFragmentDirections
@@ -17,6 +17,7 @@ import mx.julio.breedog.presentation.auth.signup.SignupFragment
 import mx.julio.breedog.presentation.base.hide
 import mx.julio.breedog.presentation.base.show
 import mx.julio.breedog.presentation.main.MainActivity
+import javax.inject.Inject
 
 /**
  * Activity for authentication flow.
@@ -25,6 +26,9 @@ import mx.julio.breedog.presentation.main.MainActivity
  */
 @AndroidEntryPoint
 class AuthActivity : AppCompatActivity(), LoginFragment.LoginActions, SignupFragment.SignupActions {
+
+    @Inject
+    lateinit var preferencesUtils: PreferencesUtils
 
     private lateinit var binding: ActivityAuthBinding
 
@@ -64,7 +68,7 @@ class AuthActivity : AppCompatActivity(), LoginFragment.LoginActions, SignupFrag
 
         viewModel.user.observe(this) { user ->
             if (user != null) {
-                Utils.setLoggedInUser(this@AuthActivity, user)
+                preferencesUtils.setLoggedInUser(user)
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }

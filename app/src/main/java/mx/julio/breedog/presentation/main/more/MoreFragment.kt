@@ -6,15 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import dagger.hilt.android.AndroidEntryPoint
 import mx.julio.breedog.databinding.FragmentMoreBinding
-import mx.julio.breedog.framework.Utils
+import mx.julio.breedog.framework.PreferencesUtils
 import mx.julio.breedog.presentation.auth.AuthActivity
+import javax.inject.Inject
 
 /**
  * Fragment to show more information to the user.
  * @property binding view.
+ * @property preferencesUtils SharedPreferences utils.
  */
+@AndroidEntryPoint
 class MoreFragment : Fragment() {
+
+    @Inject
+    lateinit var preferencesUtils: PreferencesUtils
 
     private lateinit var binding: FragmentMoreBinding
 
@@ -43,7 +50,7 @@ class MoreFragment : Fragment() {
      * Removes session.
      */
     private fun logout(){
-        Utils.logout(requireActivity())
+        preferencesUtils.logout()
 
         val intent = Intent(requireActivity(), AuthActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK

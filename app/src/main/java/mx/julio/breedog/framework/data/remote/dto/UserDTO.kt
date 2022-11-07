@@ -1,4 +1,4 @@
-package mx.julio.breedog.framework.data.remote.model
+package mx.julio.breedog.framework.data.remote.dto
 
 import com.squareup.moshi.Json
 

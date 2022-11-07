@@ -1,12 +1,13 @@
-package mx.julio.breedog.framework.data.remote.model
+package mx.julio.breedog.framework.data.remote.dto
 
 import com.squareup.moshi.Json
 
 /**
  * Model for represent a dog DTO.
  * @property id unique identifier.
- * @property name dog's name.
- * @property type dog's type.
+ * @property index dog index.
+ * @property name dog name.
+ * @property type dog type.
  * @property image picture.
  * @property lifeExpectancy life expectancy.
  * @property temperament spanish dog's temperament.
@@ -17,6 +18,7 @@ import com.squareup.moshi.Json
  */
 class DogDTO(
     val id: Long,
+    val index: Long,
     @field:Json(name = "name_en") val name: String,
     @field:Json(name = "dog_type") val type: String,
     @field:Json(name = "image_url") val image: String,

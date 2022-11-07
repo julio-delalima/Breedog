@@ -6,6 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import mx.julio.breedog.domain.repository.IAuthRepository
 import mx.julio.breedog.domain.repository.IDogsRepository
+import mx.julio.breedog.domain.usecase.AddDogToUser
 import mx.julio.breedog.domain.usecase.GetDogs
 import mx.julio.breedog.domain.usecase.Login
 import mx.julio.breedog.domain.usecase.Signup
@@ -44,4 +45,13 @@ object UseCasesModule {
     @Provides
     @Singleton
     fun loginProvider(repository: IAuthRepository): Login = Login(repository)
+
+    /**
+     * Provides an instance of the use case.
+     * @param repository the dogs repository.
+     * @return the use case.
+     */
+    @Provides
+    @Singleton
+    fun addDogToUser(repository: IDogsRepository): AddDogToUser = AddDogToUser(repository)
 }

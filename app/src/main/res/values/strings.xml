@@ -38,6 +38,7 @@
     <string name="text_there_was_an_error">There was an error</string>
     <string name="error_generic">An error was occurred.</string>
     <string name="error_unauthorized">Wrong user or password.</string>
+    <string name="error_adding_dog">An error was occurred adding the dog. </string>
 
 
 </resources>

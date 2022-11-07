@@ -4,7 +4,7 @@ import mx.julio.breedog.data.source.IAuthSource
 import mx.julio.breedog.framework.data.remote.Api
 import mx.julio.breedog.framework.data.remote.request.SignInRequestDTO
 import mx.julio.breedog.framework.data.remote.request.SignupRequestDTO
-import mx.julio.breedog.framework.data.remote.response.Response
+import mx.julio.breedog.framework.data.remote.response.DataResponse
 import mx.julio.breedog.framework.data.remote.response.UserData
 import javax.inject.Inject
 
@@ -15,7 +15,7 @@ import javax.inject.Inject
  */
 class AuthRemoteSource @Inject constructor(private val api: Api) : IAuthSource {
 
-    override suspend fun signup(email: String, password: String, passwordConfirmation: String): Response<UserData> {
+    override suspend fun signup(email: String, password: String, passwordConfirmation: String): DataResponse<UserData> {
        return api.signup(
             SignupRequestDTO(
                 email,
@@ -25,7 +25,7 @@ class AuthRemoteSource @Inject constructor(private val api: Api) : IAuthSource {
         )
     }
 
-    override suspend fun login(email: String, password: String): Response<UserData> {
+    override suspend fun login(email: String, password: String): DataResponse<UserData> {
         return api.login(
             SignInRequestDTO(
                 email,

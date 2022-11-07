@@ -1,6 +1,6 @@
 package mx.julio.breedog.framework.data.remote.response
 
-import mx.julio.breedog.framework.data.remote.model.DogDTO
+import mx.julio.breedog.framework.data.remote.dto.DogDTO
 
 /**
  * Represents the remote data of dogs.

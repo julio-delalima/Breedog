@@ -12,13 +12,13 @@ import mx.julio.breedog.domain.model.Dog
  */
 class DogsAdapter : ListAdapter<Dog, DogHolder>(DiffCallback) {
 
-    private var onDogSelectListener: ((Dog) -> Unit)? = null
+    private var onDogSelectListener: ((Dog, Boolean) -> Unit)? = null
 
     /**
      * Set new value for listener.
      * @param listener the new value.
      */
-    fun setOnDogSelectListener(listener: (Dog) -> Unit) {
+    fun setOnDogSelectListener(listener: (Dog, Boolean) -> Unit) {
         this.onDogSelectListener = listener
     }
 
@@ -29,8 +29,8 @@ class DogsAdapter : ListAdapter<Dog, DogHolder>(DiffCallback) {
                 parent,
                 false
             )
-        ) {
-            onDogSelectListener?.invoke(getItem(it))
+        ) { position, long ->
+            onDogSelectListener?.invoke(getItem(position), long)
         }
     }
 

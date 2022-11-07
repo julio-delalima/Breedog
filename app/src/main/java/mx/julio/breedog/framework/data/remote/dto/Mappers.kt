@@ -1,4 +1,4 @@
-package mx.julio.breedog.framework.data.remote.model
+package mx.julio.breedog.framework.data.remote.dto
 
 import mx.julio.breedog.domain.model.Dog
 import mx.julio.breedog.domain.model.User
@@ -11,6 +11,7 @@ import mx.julio.breedog.domain.model.User
 fun DogDTO.toDomainDog(): Dog {
     return Dog(
         this.id,
+        this.index,
         this.name,
         this.type,
         this.image,

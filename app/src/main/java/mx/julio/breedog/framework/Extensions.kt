@@ -30,6 +30,7 @@ suspend fun <T> makeNetworkCall(call: suspend () -> T) = withContext(Dispatchers
                 "sign_up_error" -> R.string.error_signing_in
                 "sign_in_error" -> R.string.error_logging_in
                 "user_already_exists" -> R.string.error_existing
+                "error_adding_dog" -> R.string.error_adding_dog
                 else -> R.string.error_generic
             }
         )
