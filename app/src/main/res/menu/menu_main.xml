@@ -6,12 +6,9 @@
         android:title="@string/text_home" />
 
     <item
+        android:id="@+id/camera"
         android:icon="@drawable/ic_camera"
         android:title="@string/text_scan" />
-
-    <item
-        android:icon="@drawable/ic_heart"
-        android:title="@string/text_favorites" />
 
     <item
         android:id="@id/moreFragment"

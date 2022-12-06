@@ -39,6 +39,10 @@
     <string name="error_generic">An error was occurred.</string>
     <string name="error_unauthorized">Wrong user or password.</string>
     <string name="error_adding_dog">An error was occurred adding the dog. </string>
+    <string name="error_permission_denied">Yo have to accept the permission.</string>
+    <string name="text_accept_permission">Accept permission</string>
+    <string name="error_taking_photo">Error taking photo: %s.</string>
+    <string name="error_no_image">Error showing the image.</string>
 
 
 </resources>
